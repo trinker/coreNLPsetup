@@ -1,0 +1,14 @@
+Package: coreNLPsetup
+Title: A Set of Tools to Ensure Proper Setup of Stanford's CoreNLP
+Version: 0.0.1
+Authors@R: c(person("Tyler", "Rinker", email = "tyler.rinker@gmail.com", role = c("aut", "cre")))
+Maintainer: Tyler Rinker <tyler.rinker@gmail.com>
+Description: Ensures that 'CoreNLP' is installed and is playing nicely with 'Java'.
+Depends: R (>= 3.3.3)
+Imports: qdapRegex
+Suggests: testthat
+Date: 2017-04-11
+License: GPL-2
+LazyData: TRUE
+Roxygen: list(wrap = FALSE)
+RoxygenNote: 6.0.1

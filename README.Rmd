@@ -1,0 +1,66 @@
+---
+title: "coreNLPsetup"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  md_document:
+    toc: true      
+---
+
+```{r, echo=FALSE}
+desc <- suppressWarnings(readLines("DESCRIPTION"))
+regex <- "(^Version:\\s+)(\\d+\\.\\d+\\.\\d+)"
+loc <- grep(regex, desc)
+ver <- gsub(regex, "\\2", desc[loc])
+verbadge <- sprintf('<a href="https://img.shields.io/badge/Version-%s-orange.svg"><img src="https://img.shields.io/badge/Version-%s-orange.svg" alt="Version"/></a></p>', ver, ver)
+````
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+knit_hooks$set(htmlcap = function(before, options, envir) {
+  if(!before) {
+    paste('<p class="caption"><b><em>',options$htmlcap,"</em></b></p>",sep="")
+    }
+    })
+knitr::opts_knit$set(self.contained = TRUE, cache = FALSE)
+knitr::opts_chunk$set(fig.path = "tools/figure/")
+```
+
+
+[![Build Status](https://travis-ci.org/trinker/coreNLPsetup.svg?branch=master)](https://travis-ci.org/trinker/coreNLPsetup)
+[![Coverage Status](https://coveralls.io/repos/trinker/coreNLPsetup/badge.svg?branch=master)](https://coveralls.io/r/trinker/coreNLPsetup?branch=master)
+`r verbadge`
+
+
+**coreNLPsetup** is a set of tools to ensure proper setup of [Stanford's CoreNLP](https://stanfordnlp.github.io/CoreNLP/).
+
+# Tools
+
+
+| Function                  | Task       | Description                           | 
+|---------------------------|------------|---------------------------------------| 
+| `check_setup`             | checking   | Check that Java and CoreNLP are setup | 
+| `check_java`              | checking   | Check that Java is setup              |  
+| `check_stanford`          | checking   | Check that CoreNLP is setup           |  
+| `coreNLP_version`         | constant   | The current version of corNLP         |  
+| `jave_version`            | constant   | The current version of Java           | 
+| `coreNLP_loc`             | config     | Configure a CoreNLP location path     |          
+| `coreNLP_url`             | config     | Configure the CoreNLP url             |          
+
+
+# Installation
+
+To download the development version of **coreNLPsetup**:
+
+Download the [zip ball](https://github.com/trinker/coreNLPsetup/zipball/master) or [tar ball](https://github.com/trinker/coreNLPsetup/tarball/master), decompress and run `R CMD INSTALL` on it, or use the **pacman** package to install the development version:
+
+```r
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load_current_gh("trinker/coreNLPsetup")
+```
+
+# Contact
+
+You are welcome to:    
+- submit suggestions and bug-reports at: <https://github.com/trinker/coreNLPsetup/issues>    
+- send a pull request on: <https://github.com/trinker/coreNLPsetup/>    
+- compose a friendly e-mail to: <tyler.rinker@gmail.com>    
