@@ -18,8 +18,8 @@ check_coreNLP_version <- function(){
     x <- xml2::read_html(x)
     x <- rvest::html_nodes(x, xpath = "//*[@class=\"downloadbutton\"]")
     x <- rvest::html_attr(x, "href")
-    clipr::write_clip(basename(x))
-    basename(x)
+    clipr::write_clip(tools::file_path_sans_ext(basename(x)))
+    tools::file_path_sans_ext(basename(x))
 }
 
 
