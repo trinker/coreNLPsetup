@@ -5,9 +5,9 @@
 \alias{coreNLP_url}
 \title{Make User Specific Path/URL to coreNLP}
 \usage{
-coreNLP_loc(version = tagger::coreNLP_version)
+coreNLP_loc(version = coreNLPsetup::coreNLP_version)
 
-coreNLP_url(version = tagger::coreNLP_version)
+coreNLP_url(version = coreNLPsetup::coreNLP_version)
 }
 \arguments{
 \item{version}{The version of coreNLP.}

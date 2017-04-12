@@ -4,7 +4,7 @@
 \alias{check_stanford_installed}
 \title{Check if Stanford \pkg{CoreNLP} is Installed and In Root}
 \usage{
-check_stanford_installed(stanford = tagger::coreNLP_loc(),
+check_stanford_installed(stanford = coreNLPsetup::coreNLP_loc(),
   download = tagger::coreNLP_url(), verbose = TRUE)
 }
 \arguments{

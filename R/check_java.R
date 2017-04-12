@@ -25,7 +25,7 @@ check_java <- function(verbose = TRUE){
     if (isTRUE(verbose)) message("Java appears to be installed and at least of the minimal version.")
 }
 
-check_java_version <- function(min.ver = tagger::java_version, verbose = TRUE){
+check_java_version <- function(min.ver = coreNLPsetup::java_version, verbose = TRUE){
     if (isTRUE(verbose)) message("\nchecking minimal Java version...\n")
     java <- try(system("java -version", intern = TRUE))
     ver <- qdapRegex::rm_between(java, '"', '"', extract=TRUE)[[1]]
