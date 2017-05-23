@@ -5,7 +5,7 @@
 \title{Check if Stanford \pkg{CoreNLP} is Installed and In Root}
 \usage{
 check_stanford_installed(stanford = coreNLPsetup::coreNLP_loc(),
-  download = tagger::coreNLP_url(), verbose = TRUE)
+  download = coreNLPsetup::coreNLP_url(), verbose = TRUE)
 }
 \arguments{
 \item{stanford}{The version of Stanford's \pkg{CoreNLP}.}
