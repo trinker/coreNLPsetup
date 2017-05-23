@@ -14,7 +14,7 @@
 #' check_stanford_installed()
 #' }
 check_stanford_installed <- function(stanford = coreNLPsetup::coreNLP_loc(),
-    download = tagger::coreNLP_url(), verbose = TRUE){
+    download = coreNLPsetup::coreNLP_url(), verbose = TRUE){
 
     if (isTRUE(verbose)) message("\nchecking if coreNLP is installed...\n")
 
