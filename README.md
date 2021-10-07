@@ -2,6 +2,7 @@ coreNLPsetup   [![Follow](https://img.shields.io/twitter/follow/tylerrinker.svg?
 ============
 
 
+[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
 [![Build
 Status](https://travis-ci.org/trinker/coreNLPsetup.svg?branch=master)](https://travis-ci.org/trinker/coreNLPsetup)
 [![Coverage
